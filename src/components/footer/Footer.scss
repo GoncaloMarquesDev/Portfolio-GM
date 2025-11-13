@@ -1,0 +1,97 @@
+@use "../../styles/_mixins.scss" as mixins;
+@use "../../styles/_tokens.scss" as tokens;
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: tokens.$gray-600;
+  padding-top: 64px;
+  padding-bottom: 32px;
+}
+
+/* ====== Footer Navigation ====== */
+.footer-nav {
+  @include mixins.left-padding;
+  width: 1280px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 40px 32px;
+  gap: 48px;
+}
+
+/* Botão animado do footer */
+.btn-footer {
+  @include mixins.button-base-footer;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+
+  .original {
+    background: transparent;
+    display: grid;
+    inset: 0;
+    place-content: center;
+    position: absolute;
+    transform: translateY(0);
+    /* Mantemos a transição apenas no hover para entrada */
+    transition: none; 
+  }
+
+  &:hover .original {
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+  }
+
+  .letters {
+    display: inline-flex;
+    /* Sem transição no estado base para evitar animação na saída */
+    transition: none; 
+  }
+
+  span {
+    opacity: 0;
+    transform: translateY(-15px);
+    /* Sem transição aqui */
+    transition: none;
+  }
+
+  span:nth-child(2n) {
+    transform: translateY(15px);
+  }
+
+  &:hover span {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.3s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.3s;
+  }
+
+  &:hover span:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+}
+
+
+/* ====== Footer Copy Section ====== */
+.copy-wrapper {
+  width: 1280px;
+  padding: 0 32px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-copy {
+  @include mixins.body;
+  color: #ffffff;
+  opacity: 0.8;
+  font-size: 14px;
+  text-align: right;
+  padding-right: 32px;
+}

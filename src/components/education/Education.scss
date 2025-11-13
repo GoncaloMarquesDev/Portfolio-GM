@@ -1,0 +1,40 @@
+@use "../../styles/_mixins.scss" as mixins;
+@use "../../styles/_tokens.scss" as tokens;
+.formation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0 32px;
+  gap: 64px; // dá espaço entre o course e o year
+  width: 100%; // usa toda a largura disponível do pai
+  flex-wrap: wrap; // se o texto for grande, passa à linha
+}
+
+.course {
+  @include mixins.heading-5;
+  color: tokens.$gray-600;
+  flex: 1; // ocupa o espaço restante do flex
+  min-width: 200px; // evita ficar demasiado pequeno
+}
+
+.year {
+  @include mixins.heading-6;
+  color: tokens.$gray-600;
+  opacity: 0.5;
+  flex-shrink: 0; // impede o ano de encolher
+}
+
+.school {
+  @include mixins.small;
+  padding-bottom: 32px;
+  color: tokens.$orange-500;
+  font-weight: bolder;
+}
+
+.about-line {
+  border: none;
+  height: 1px;
+  background-color: tokens.$gray-200;
+  width: 100%;
+}
+

@@ -1,0 +1,80 @@
+@use "../../styles/_mixins.scss" as mixins;
+@use "../../styles/_tokens.scss" as tokens;
+
+.wrapper-resume {
+  @include mixins.left-padding;
+  width: 1280px;
+  padding: 96px 32px 104px 32px; /* espaçamento consistente */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.line-group {
+  @include mixins.header-title;
+  padding-bottom: 16px;
+}
+
+.section-line-resume {
+  @include mixins.section-line-base;
+  background-color: tokens.$gray-500;
+}
+
+.resume {
+  @include mixins.heading-5-light;
+  color: tokens.$gray-500;
+  padding-bottom: 8px;
+}
+
+.resume-description {
+  @include mixins.heading-4-regular;
+  color: tokens.$gray-600;
+  padding-bottom: 32px;
+  max-width: 800px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Botão do download */
+.resume-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 3px;
+  color: tokens.$gray-600;
+  letter-spacing: 0.05em;
+  font-size: 14px;
+  gap: 16px;
+  width: 250px;
+  border: 1px solid #e5e7eb;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #f3f4f6;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.resume-icon {
+  width: 15px;
+  height: 15px;
+  color: #1f2937;
+  animation: bounce 1s infinite;
+}
+
+/* Animação da seta */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}

@@ -1,0 +1,47 @@
+@use "../../styles/_mixins.scss" as mixins;
+@use "../../styles/_tokens.scss" as tokens;
+
+.info-text {
+  @include mixins.left-padding;
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 32px 104px 32px; /* espaço superior e inferior consistente */
+  margin: 0 auto; /* centraliza horizontalmente */
+}
+
+.selected-works {
+  @include mixins.heading-5-light;
+  color: mixins.$gray-500;
+}
+
+.works-text {
+  @include mixins.heading-4-regular;
+  color: tokens.$gray-600;
+}
+
+.header {
+  padding: 0 32px 32px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  @include mixins.header-title;
+  padding-bottom: 16px;
+}
+
+.section-line {
+  @include mixins.section-line-base;
+  background-color: tokens.$gray-500;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap; /* permite quebra em ecrãs menores */
+  gap: 90px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

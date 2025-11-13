@@ -1,0 +1,90 @@
+@use "../../styles/_mixins.scss" as mixins;
+@use "../../styles/_tokens.scss" as tokens;
+
+.wrapper-about {
+  @include mixins.left-padding;
+  width: 1280px;
+  padding: 96px 32px 104px 32px; /* top e bottom equilibrados */
+  margin: 0 auto; /* centraliza a secção */
+}
+
+.line-group {
+  @include mixins.header-title;
+  padding-bottom: 16px;
+}
+
+.section-line-about {
+  @include mixins.section-line-base;
+  background-color: tokens.$gray-500;
+}
+
+.about-me {
+  @include mixins.heading-5-light;
+  color: tokens.$gray-500;
+}
+
+.flex-about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1200px;
+  height: 330px;
+  gap: 16px;
+}
+
+.me {
+  @include mixins.heading-2-bold;
+  color: tokens.$gray-600;
+  padding-bottom: 32px;
+}
+
+.text-me {
+  @include mixins.heading-4-regular;
+  color: tokens.$gray-600;
+  max-width: 409px;
+  padding-bottom: 32px;
+}
+
+.contact-me {
+  @include mixins.heading-5;
+  color: tokens.$gray-600;
+}
+
+.flex-education {
+  display: flex;
+  flex-direction: column;
+}
+
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: 'Onest', sans-serif;
+  color: tokens.$gray-600;
+  text-decoration: none;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+  fill: currentColor;  // herda cor do texto
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}

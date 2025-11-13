@@ -1,0 +1,96 @@
+@use "../../styles/_mixins.scss" as mixins;
+@use "../../styles/_tokens.scss" as tokens;
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent; // mantém o fundo limpo
+  padding: 24px 0; // espaçamento superior e inferior
+  position: relative;
+  z-index: 100; // fica acima de hero/backgrounds
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 1280px;
+  max-width: 90%; // para ficar fluido em ecrãs menores
+  height: auto;
+  gap: 32px; // espaçamento entre elementos
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 48px; // espaçamento entre os links
+}
+
+.btn {
+  @include mixins.button-base;
+
+  display: block;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: tokens.$gray-800;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: tokens.$orange-500;
+  }
+
+  .original {
+    background: transparent;
+    display: grid;
+    inset: 0;
+    place-content: center;
+    position: absolute;
+    transform: translateY(0);
+  }
+
+  &:hover .original {
+    transform: translateY(100%);
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+  }
+
+  .letters {
+    display: inline-flex;
+  }
+
+  span {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  span:nth-child(2n) {
+    transform: translateY(15px);
+  }
+
+  &:hover span {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+  }
+
+  &:hover span:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+}
+
+/* Linha subtil opcional sob a nav (tipo separador visual) */
+.nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 1px;
+  background-color: tokens.$gray-100;
+  opacity: 0.6;
+}
