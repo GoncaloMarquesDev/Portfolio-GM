@@ -3,8 +3,10 @@
 
 .wrapper-about {
   @include mixins.left-padding;
-  width: 1280px;
+   width: 100%;
+  max-width: 1280px;
   padding: 92px 32px 32px 32px;
+  margin: 0 auto;
 }
 .line-group {
   @include mixins.header-title;
@@ -22,7 +24,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 1200px;
+   width: 100%;
+  max-width: 1200px;
   height: 330px;
   gap: 16px;
 }
@@ -102,7 +105,8 @@
   }
   .wrapper-about {
   @include mixins.left-padding;
-  width: 1280px;
+  width: 100%;
+  max-width: 100%;
   padding: 56px 32px 32px 32px;
 }
 .line-group {

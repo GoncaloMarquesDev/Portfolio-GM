@@ -2,22 +2,23 @@
 
 .hero-container {
   @include mixins.left-padding;
-  width: 1280px;
-  height: 500px;
+    width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  
-  /* espaçamento entre secções */
   padding-top: 48px;
   padding-bottom: 104px;
-  margin: 0 auto;
+
 }
 
 .hero {
-  width: 1200px;
-  height: 450px;
+width: 100%;
+  max-width: 1200px;
+  height: auto;
 }
 
 .hero-image img {

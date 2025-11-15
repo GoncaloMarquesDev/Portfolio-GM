@@ -40,7 +40,6 @@
     place-content: center;
     position: absolute;
     transform: translateY(0);
-    /* Mantemos a transição apenas no hover para entrada */
     transition: none; 
   }
 
@@ -51,14 +50,12 @@
 
   .letters {
     display: inline-flex;
-    /* Sem transição no estado base para evitar animação na saída */
     transition: none; 
   }
 
   span {
     opacity: 0;
     transform: translateY(-15px);
-    /* Sem transição aqui */
     transition: none;
   }
 
@@ -77,7 +74,6 @@
   }
 }
 
-
 /* ====== Footer Copy Section ====== */
 .copy-wrapper {
   width: 1280px;
@@ -95,40 +91,38 @@
   text-align: right;
   padding-right: 32px;
 }
-/* media queries */
-@media (min-width: 320px) and (max-width: 480px) {
-  .footer-nav {
-  @include mixins.left-padding;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 32px;
-  gap: 0px;
-}
-.footer-copy {
-  @include mixins.small;
-  color: #ffffff;
-  
-  text-align: right;
 
-  text-align: center;
-}
-.copy-wrapper {
-  justify-content: center;
-  
-}
-.footer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: tokens.$gray-600;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-.btn-footer {
-  @include mixins.button-base-footer-mobile;
-}
+/* media queries */
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .footer-nav {
+    @include mixins.left-padding;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+    gap: 0;
+    width: 100%;
+  }
+
+  .btn-footer {
+    @include mixins.button-base-footer-mobile;
+  }
+
+  .copy-wrapper {
+    justify-content: center;
+    width: 100%;
+    padding: 0 32px;
+  }
+
+  .footer-copy {
+    @include mixins.small;
+    color: #ffffff;
+    text-align: center;
+    padding-right: 0;
+  }
 }

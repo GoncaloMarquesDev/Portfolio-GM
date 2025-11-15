@@ -1,9 +1,10 @@
 
 .teste{
- width: 100vw;
+ width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  
   
 }
 .page-wrapper {
@@ -12,5 +13,7 @@
   height: 100%;    // mobile fix
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+  outline: 2px solid red;
+  
 }
