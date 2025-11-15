@@ -45,3 +45,45 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+/* media queries */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .info-text {
+    padding-left: 32px;
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 260px 32px 0px 32px;
+    margin: 0 auto;
+  }
+  .section-line {
+    display: none;
+  }
+  .selected-works {
+    @include mixins.heading-5-light;
+    color: tokens.$gray-500;
+    
+
+  }
+  .header {
+    align-items: center;
+    padding: 0 0 32px 0px;
+  }
+  .works-text {
+    @include mixins.body;
+    color: tokens.$gray-600;
+    width: 300px;
+    align-items: center;
+    text-align: center;
+  }
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 64px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

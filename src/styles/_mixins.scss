@@ -128,6 +128,19 @@
   background-color: $white;
   color: $neutral-600;
 }
+@mixin button-base-mobile {
+  /* font-family: $font-onest; */
+  font-size: $font-size-12;
+  font-weight: $font-weight-onest-2;
+  line-height: $line-height-10;
+  letter-spacing: $letter-spacing-12;
+  padding: 30px 30px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: $white;
+  color: $neutral-600;
+}
 @mixin left-padding {
   padding-left: 32px;
 }
@@ -145,6 +158,19 @@
 @mixin button-base-footer {
   /* font-family: $font-onest; */
   font-size: $font-size-10;
+  font-weight: $font-weight-onest-2;
+  line-height: $line-height-10;
+  letter-spacing: $letter-spacing-12;
+  padding: 30px 30px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: $gray-600;
+  color: $white;
+}
+@mixin button-base-footer-mobile {
+  /* font-family: $font-onest; */
+  font-size: $font-size-12;
   font-weight: $font-weight-onest-2;
   line-height: $line-height-10;
   letter-spacing: $letter-spacing-12;

@@ -38,3 +38,40 @@
   width: 100%;
 }
 
+@media (max-width: 768px) {
+.education-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.formation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0 32px;
+   gap: 16px;
+  width: 100%; // usa toda a largura disponível do pai
+  flex-wrap: wrap; // se o texto for grande, passa à linha
+  
+}
+  
+}
+@media (min-width: 320px) and (max-width: 480px) {
+ .course {
+    @include mixins.heading-6;
+    color: tokens.$gray-600;
+    flex: 1;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
+  .formation {
+  padding: 24px 0 24px;
+}
+.flex-education {
+    margin-top: 20px;
+    
+}
+}

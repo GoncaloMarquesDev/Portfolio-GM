@@ -4,25 +4,20 @@
 .wrapper-about {
   @include mixins.left-padding;
   width: 1280px;
-  padding: 96px 32px 104px 32px; /* top e bottom equilibrados */
-  margin: 0 auto; /* centraliza a secção */
+  padding: 92px 32px 32px 32px;
 }
-
 .line-group {
   @include mixins.header-title;
   padding-bottom: 16px;
 }
-
 .section-line-about {
   @include mixins.section-line-base;
   background-color: tokens.$gray-500;
 }
-
 .about-me {
   @include mixins.heading-5-light;
   color: tokens.$gray-500;
 }
-
 .flex-about {
   display: flex;
   flex-direction: row;
@@ -37,19 +32,17 @@
   color: tokens.$gray-600;
   padding-bottom: 32px;
 }
-
 .text-me {
   @include mixins.heading-4-regular;
   color: tokens.$gray-600;
   max-width: 409px;
   padding-bottom: 32px;
 }
-
 .contact-me {
   @include mixins.heading-5;
   color: tokens.$gray-600;
+  padding-bottom: 32px;
 }
-
 .flex-education {
   display: flex;
   flex-direction: column;
@@ -59,7 +52,7 @@
   border: none;
   background: none;
   cursor: pointer;
-  font-family: 'Onest', sans-serif;
+  font-family: "Onest", sans-serif;
   color: tokens.$gray-600;
   text-decoration: none;
 }
@@ -78,7 +71,7 @@
 .cta svg {
   transform: translateX(-8px);
   transition: all 0.3s ease;
-  fill: currentColor;  // herda cor do texto
+  fill: currentColor; // Aqui a seta herda a cor do texto
 }
 
 .cta:hover svg {
@@ -87,4 +80,60 @@
 
 .cta:active svg {
   transform: scale(0.9);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .line-group {
+    align-items: center;
+  }
+  .flex-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+    align-items: center;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+  }
+  .wrapper-about {
+  @include mixins.left-padding;
+  width: 1280px;
+  padding: 56px 32px 32px 32px;
+}
+.line-group {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.me {
+  @include mixins.heading-4;
+  color: tokens.$gray-600;
+  padding-bottom: 32px;
+}
+.section-line-about {
+ display: none;
+}
+.text-me {
+  @include mixins.body;
+  color: tokens.$gray-600;
+
+  padding-bottom: 32px;
+  text-align:center;
+}
+.cta svg {
+display: none;
+}
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 0px;
+  font-weight: bold;
+}
 }

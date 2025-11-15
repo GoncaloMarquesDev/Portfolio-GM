@@ -20,6 +20,7 @@ function LandingPage() {
 
   return (
     <>
+    <div className="teste">
       <div className="page-wrapper">
         <Nav
           onProjectsClick={() => scrollToRef(portfolioRef)}
@@ -42,6 +43,7 @@ function LandingPage() {
   onAboutClick={() => scrollToRef(aboutRef)}
   onResumeClick={() => scrollToRef(resumeRef)}
 />
+      </div>
       </div>
     </>
   );
