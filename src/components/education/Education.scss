@@ -66,6 +66,7 @@
     overflow-wrap: break-word;
     word-break: break-word;
     white-space: normal;
+    text-align: center;
   }
   .formation {
   padding: 24px 0 24px;
@@ -73,5 +74,9 @@
 .flex-education {
     margin-top: 20px;
     
+}
+.year {
+  @include mixins.heading-6;
+ 
 }
 }
