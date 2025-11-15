@@ -8,6 +8,7 @@ interface NavProps {
 
 function Nav({ onProjectsClick, onAboutClick, onResumeClick }: NavProps) {
   return (
+     <nav className="nav">
     <div className="container">
       <div className="container_links">
         <div className="links">
@@ -54,6 +55,7 @@ function Nav({ onProjectsClick, onAboutClick, onResumeClick }: NavProps) {
       </div>
       <div className="line"></div>
     </div>
+    </nav>
   );
 }
 

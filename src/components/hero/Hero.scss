@@ -142,3 +142,93 @@ ul {
     #fd1f1f
   );
 }
+/* media queries */
+@media (max-width: 1024px) {
+  .hero-container {
+    width: 90%;
+    height: auto; // deixar crescer conforme conteúdo
+    padding-top: 32px;
+    padding-bottom: 64px;
+  }
+
+  .hero {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+    padding-block: 24px 24px;
+  }
+
+  .hero-text p,
+  .hero-subtext p {
+    text-align: left;
+  }
+
+  .hero-socials {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    width: 100%;
+    padding: 16px 24px;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-image img {
+    width: 140px;
+    height: 140px;
+    padding-block: 16px 16px;
+  }
+
+  .hero-text p,
+  .hero-subtext p {
+    text-align: center;
+    padding-bottom: 16px;
+  }
+
+  .hero-socials {
+    justify-content: center;
+    gap: 12px;
+
+    img {
+      padding-right: 8px;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .hero-image img {
+    width: 100px;
+    height: 100px;
+    padding-block: 12px 12px;
+  }
+
+  .hero-text p{
+  @include mixins.heading-6;
+  }
+
+  .hero-subtext p  {
+    
+     @include mixins.small;
+  }
+
+  .hero-socials img {
+    width: 30px; // reduzir ícones também
+    height: 30px;
+  }
+  .example-2 .icon-content a svg {
+  
+  width: 20px;
+  height: 20px;
+}
+}

@@ -105,3 +105,46 @@
 .work-content:hover .work-image {
   filter: grayscale(100%);
 }
+
+/* media queries */
+@media (min-width: 320px) and (max-width: 480px) {
+  .work-content {
+    position: relative;
+    width: 380px;
+    height: 305px;
+    border-radius: 3px;
+    overflow: visible;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: none;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .work-image {
+    width: 350px;
+
+    object-fit: contain;
+    border-radius: 3px;
+    transition: filter 0.4s ease;
+  }
+  .card-title {
+    text-decoration: none;
+    border-bottom: none;
+    box-shadow: none;
+    outline: none;
+    cursor: none;
+    @include mixins.heading-6;
+    color: tokens.$gray-600;
+    padding-top: 16px;
+    text-align: center;
+  }
+  .work-description {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    width: 105%;
+  }
+}
