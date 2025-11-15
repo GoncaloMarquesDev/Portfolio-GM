@@ -21,11 +21,11 @@
 
 .work-content {
   position: relative;
-  width: 100%;             // <<< CORRIGIDO
-  max-width: 560px;        // <<< Para desktop continua com limite
+  width: 100%; // <<< CORRIGIDO
+  max-width: 560px; // <<< Para desktop continua com limite
   aspect-ratio: 56 / 44.3; // <<< Mantém proporção original
   border-radius: 3px;
-  overflow: visible;       // <<< ALTERADO para evitar cortar o absolute
+  overflow: visible; // <<< ALTERADO para evitar cortar o absolute
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
   cursor: none;
@@ -38,7 +38,7 @@
 
 /* Imagem normal */
 .work-image {
-  width: 100%;        // <<< SEM overflow
+  width: 100%; // <<< SEM overflow
   height: 100%;
   object-fit: cover;
   border-radius: 3px;
@@ -65,7 +65,7 @@
   text-align: center;
   color: white;
 
-  z-index: 10;  // <<< IMPORTANTE para ficar por cima
+  z-index: 10; // <<< IMPORTANTE para ficar por cima
 }
 
 /* Tooltip (já configurada) */
@@ -113,11 +113,11 @@
 @media (min-width: 320px) and (max-width: 480px) {
   .work-content {
     position: relative;
-    width: 100%;
-    max-width: 100%;
+    width: 95%;
+    max-width: 95%;
     height: 305px;
     border-radius: 3px;
-    overflow: visible;  // mesmo ajuste aqui
+    overflow: visible; // mesmo ajuste aqui
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
     cursor: none;
@@ -127,14 +127,14 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .work-image {
     width: 350px;
     object-fit: contain;
     border-radius: 3px;
     transition: filter 0.4s ease;
   }
-  
+
   .card-title {
     text-decoration: none;
     border-bottom: none;
@@ -146,12 +146,12 @@
     padding-top: 16px;
     text-align: center;
   }
-  
+
   .work-description {
     font-size: 12px;
     line-height: 1.5;
     text-align: center;
     width: 105%;
-    z-index: 10;  // manter aqui também para mobile
+    z-index: 10; // manter aqui também para mobile
   }
 }
