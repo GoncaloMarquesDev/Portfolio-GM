@@ -43,6 +43,7 @@
   object-fit: cover;
   border-radius: 3px;
   transition: filter 0.4s ease;
+  
 }
 
 /* Texto da descrição: começa escondido */
@@ -110,12 +111,30 @@
 }
 
 /* media queries */
+
+
+@media (max-width: 768px) {
+    .card-title {
+    text-align: center;
+    @include mixins.heading-6;
+  }
+   .work-image {
+    width: 600px;
+    object-fit: contain;
+    border-radius: 3px;
+    transition: filter 0.4s ease;
+  }
+}
+
+
+
 @media (min-width: 320px) and (max-width: 480px) {
+ 
   .work-content {
     position: relative;
-    width: 95%;
-    max-width: 95%;
-    height: 305px;
+    width: 100%;
+    max-width: 100%;
+   /*  height: 200px; */
     border-radius: 3px;
     overflow: visible; // mesmo ajuste aqui
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
@@ -129,7 +148,7 @@
   }
 
   .work-image {
-    width: 350px;
+    width: 300px;
     object-fit: contain;
     border-radius: 3px;
     transition: filter 0.4s ease;

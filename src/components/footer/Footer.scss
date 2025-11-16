@@ -93,6 +93,36 @@
 }
 
 /* media queries */
+
+@media (max-width: 768px) {
+    .footer {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+ .footer-nav {
+    @include mixins.left-padding;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 32px;
+    gap: 0;
+    width: 100%;
+  }
+   .copy-wrapper {
+    justify-content: center;
+    width: 100%;
+    padding: 0 32px;
+  }
+
+  .footer-copy {
+  
+    color: #ffffff;
+    text-align: center;
+    padding-right: 0;
+  }
+}
+
+
 @media (max-width: 480px) {
   .footer {
     padding-top: 32px;

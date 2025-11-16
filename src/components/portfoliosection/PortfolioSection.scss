@@ -50,6 +50,38 @@
 
 /* media queries */
 
+@media (max-width: 768px) {
+ .info-text {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 260px 32px 0 24px;
+    margin: 0 auto;
+  }
+ .section-line {
+    display: none;
+  }
+  .header {
+    align-items: center;
+    padding: 0 0 32px 0;
+  }
+    .portfolio {
+    flex-direction: column;
+    gap: 64px;
+    width: 100%; // evitar overflow
+    justify-content: flex-start;
+    align-items: center;
+  }
+   .works-text {
+    
+    width: 600px;
+    text-align: center;
+  }
+}
+
 @media (max-width: 480px) {
   .info-text {
     max-width: 100%;
@@ -88,6 +120,6 @@
     gap: 64px;
     width: 100%; // evitar overflow
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
   }
 }
