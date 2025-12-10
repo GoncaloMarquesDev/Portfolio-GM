@@ -1,0 +1,33 @@
+@use "../../styles/_mixins.scss" as mixins;
+@use "../../styles/_tokens.scss" as tokens;
+
+.chip-react {
+  margin-top: 30px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background-color: tokens.$gray-200;
+  @include mixins.heading-6;
+  color: tokens.$gray-500;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  display: inline-block;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .chip {
+  background-color: tokens.$gray-200;
+  @include mixins.small;
+  color: tokens.$gray-500;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  display: inline-block;
+}
+.chip-react{
+  justify-content: center;
+}
+}

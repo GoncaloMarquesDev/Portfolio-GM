@@ -8,6 +8,7 @@ import Resume from "../components/resume/Resume";
 
 import "./LandingPage.scss";
 import Footer from "../components/footer/Footer";
+import CardV2 from "../components/cardv2/CardV2";
 
 function LandingPage() {
   const portfolioRef = useRef<HTMLDivElement | null>(null);
@@ -34,7 +35,7 @@ function LandingPage() {
         <div ref={portfolioRef}>
           <PortfolioSection />
         </div>
-        
+        <CardV2/>
         <div ref={resumeRef}>
           <Resume />
         </div>
@@ -43,6 +44,7 @@ function LandingPage() {
   onAboutClick={() => scrollToRef(aboutRef)}
   onResumeClick={() => scrollToRef(resumeRef)}
 />
+
       </div>
       </div>
     </>

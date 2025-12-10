@@ -9,5 +9,18 @@
   height: 100%; // mobile fix
   display: flex;
   flex-direction: column;
-  align-items: left;
+  
+}
+/* @media (max-width: 1024px) {
+
+} */
+@media (max-width: 768px) {
+  .page-wrapper {
+  align-items: center;
+}
+}
+ @media (min-width: 320px) and (max-width: 480px) {
+   .page-wrapper {
+  align-items: center;
+}
 }

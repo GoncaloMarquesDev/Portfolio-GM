@@ -3,19 +3,19 @@
 
 .info-text {
   @include mixins.left-padding;
-  max-width: 1280px; // Usa max-width para responsividade
+  max-width: 1280px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 0 32px 104px 32px;
-  margin: 0 auto; // centraliza horizontalmente
+  padding: 144px 32px 104px 32px;
+  margin: 0 auto;
 }
 
 .selected-works {
   @include mixins.heading-5-light;
-  color: tokens.$gray-500; // usa variável correta
+  color: tokens.$gray-500;
 }
 
 .works-text {
@@ -24,7 +24,7 @@
 }
 
 .header {
-  padding: 0 32px 32px 0;
+  /*  padding: 0 32px 0 0; */
   display: flex;
   flex-direction: column;
 }
@@ -39,87 +39,67 @@
   background-color: tokens.$gray-500;
 }
 
+/* .portfolio-wrapper1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  margin: 0 auto;
+  padding: 48px 0 10px 0;
+  width: 100%;
+  max-width: 1280px;
+  background: white;
+  border-radius: 8px;
+  transition: opacity 0.5s ease;
+  justify-items: end;
+} */
+.portfolio-wrapper1 + .portfolio-wrapper1 {
+  /*N esquecer de garantir que o segundo card fica por cima */
+  z-index: 1;
+}
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 90px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 100%; // respeita largura do container pai
+  /*  margin-top: 60px; */
+  /* Importante para o lock */
+  overflow: visible;
 }
 
-/* media queries */
+.sticky-card-wrapper {
+  width: 100%;
+}
 
+.sticky-second-card {
+  border-radius: 8px;
+}
+
+//media queries
 @media (max-width: 768px) {
- .info-text {
-    max-width: 100%;
+  .info-text {
+    @include mixins.left-padding;
+    max-width: 1280px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding: 260px 32px 0 24px;
+    padding: 370px 32px 0 32px;
     margin: 0 auto;
   }
- .section-line {
-    display: none;
+  .header-title {
+    justify-content: center;
   }
-  .header {
-    align-items: center;
-    padding: 0 0 32px 0;
-  }
-    .portfolio {
-    flex-direction: column;
-    gap: 64px;
-    width: 100%; // evitar overflow
-    justify-content: flex-start;
-    align-items: center;
-  }
-   .works-text {
-    
-    width: 600px;
+  .works-text {
     text-align: center;
   }
-}
-
-@media (max-width: 480px) {
-  .info-text {
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 260px 32px 0 24px;
-    margin: 0 auto;
-  }
-
   .section-line {
     display: none;
   }
-
-  .selected-works {
-    @include mixins.heading-5-light;
-    color: tokens.$gray-500;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .info-text {
+    padding: 300px 32px 0 32px;
   }
-
-  .header {
-    align-items: center;
-    padding: 0 0 32px 0;
-  }
-
   .works-text {
-    @include mixins.body;
+    @include mixins.heading-6;
     color: tokens.$gray-600;
-    width: 300px;
-    text-align: center;
-  }
-
-  .portfolio {
-    flex-direction: column;
-    gap: 64px;
-    width: 100%; // evitar overflow
-    justify-content: flex-start;
-    align-items: center;
+    font-weight: 200;
   }
 }

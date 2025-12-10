@@ -1,0 +1,72 @@
+@use "../../styles/_mixins.scss" as mixins;
+@use "../../styles/_tokens.scss" as tokens;
+
+.portfolio-wrapper1 {
+ display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  margin: 0 auto;
+  padding: 48px 0 10px 0;
+  width: 100%;
+  max-width: 1280px;
+  background: white;
+  border-radius: 8px;
+  transition: opacity 0.5s ease;
+  justify-items: end;
+}
+
+.portfolio-wrapper1.is-fixed {
+  will-change: transform, top, left;
+}
+
+.portfolio-description1 {
+  padding-top: 32px;
+}
+
+.portfolio-header1 {
+  @include mixins.heading-4;
+  color: tokens.$gray-600;
+}
+
+.portfolio-text1 {
+  @include mixins.heading-text;
+  color: tokens.$gray-400;
+  padding-top: 16px;
+}
+
+.portfolio-img1 {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+//media queries
+@media (max-width: 768px) {
+   .portfolio-text1 {
+  @include mixins.heading-6;
+ 
+}
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .portfolio-wrapper1 {
+ display: flex;
+ flex-direction: column;
+  gap: 24px;
+  margin: 0 auto;
+  padding: 0 0 10px 0;
+  width: 100%;
+  max-width: 1280px;
+  background: white;
+  border-radius: 8px;
+  transition: opacity 0.5s ease;
+  justify-items: end;
+}
+.portfolio-text1 {
+  @include mixins.small;
+  color: tokens.$gray-400;
+  padding-top: 16px;
+}
+.portfolio-description1 {
+text-align: center;
+}
+}
