@@ -2,7 +2,7 @@
 
 .hero-container {
   @include mixins.left-padding;
-    width: 100%;
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   height: auto;
@@ -10,13 +10,12 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-top: 48px;
-  padding-bottom: 104px;
-
+  padding-top: 16px;
+  /* padding-bottom: 104px; */
 }
 
 .hero {
-width: 100%;
+  width: 100%;
   max-width: 1200px;
   height: auto;
 }
@@ -32,13 +31,14 @@ width: 100%;
   @include mixins.heading-3-regular;
   color: mixins.$neutral-600;
   padding-bottom: 16px;
+  padding-top: 16px;
   text-align: justify;
 }
 
 .hero-subtext p {
   @include mixins.heading-5-light;
   color: mixins.$neutral-600;
-  padding-bottom: 32px;
+  padding-bottom: 24px;
 }
 
 .hero-socials {
@@ -60,7 +60,7 @@ ul {
   align-items: center;
 }
 .example-2 .icon-content {
-  margin: 0 10px;
+  margin: 0 10px 0 0;
   position: relative;
 }
 .example-2 .icon-content .tooltip {
@@ -69,17 +69,17 @@ ul {
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  padding: 6px 10px;
-  border-radius: 5px;
+  padding: 3px 6px;
+  border-radius: 3px;
   opacity: 0;
   visibility: hidden;
-  font-size: 14px;
+  font-size: 12px;
   transition: all 0.3s ease;
 }
 .example-2 .icon-content:hover .tooltip {
   opacity: 1;
   visibility: visible;
-  top: -38px;
+  top: -32x;
 }
 .example-2 .icon-content a {
   position: relative;
@@ -214,13 +214,13 @@ ul {
     padding-block: 12px 12px;
   }
 
-  .hero-text p{
-  @include mixins.heading-6;
+  .hero-text p {
+    @include mixins.heading-6;
   }
 
-  .hero-subtext p  {
-    
-     @include mixins.small;
+  .hero-subtext p {
+    font-size: 12px;
+    line-height: 100%;
   }
 
   .hero-socials img {
@@ -228,8 +228,7 @@ ul {
     height: 30px;
   }
   .example-2 .icon-content a svg {
-  
-  width: 20px;
-  height: 20px;
-}
+    width: 20px;
+    height: 20px;
+  }
 }

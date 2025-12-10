@@ -20,30 +20,30 @@ function LandingPage() {
 
   return (
     <>
-    <div className="teste">
-      <div className="page-wrapper">
-        <Nav
-          onProjectsClick={() => scrollToRef(portfolioRef)}
-          onAboutClick={() => scrollToRef(aboutRef)}
-          onResumeClick={() => scrollToRef(resumeRef)}
-        />
-        <Hero />
-        <div ref={aboutRef}>
-          <AboutMe />
+      <div className="teste">
+        <div className="page-wrapper">
+          <Nav
+            onProjectsClick={() => scrollToRef(portfolioRef)}
+            onAboutClick={() => scrollToRef(aboutRef)}
+            onResumeClick={() => scrollToRef(resumeRef)}
+          />
+          <Hero />
+          <div ref={aboutRef}>
+            <AboutMe />
+          </div>
+          <div ref={portfolioRef}>
+            <PortfolioSection />
+          </div>
+
+          <div ref={resumeRef}>
+            <Resume />
+          </div>
+          <Footer
+            onProjectsClick={() => scrollToRef(portfolioRef)}
+            onAboutClick={() => scrollToRef(aboutRef)}
+            onResumeClick={() => scrollToRef(resumeRef)}
+          />
         </div>
-        <div ref={portfolioRef}>
-          <PortfolioSection />
-        </div>
-        
-        <div ref={resumeRef}>
-          <Resume />
-        </div>
-        <Footer
-  onProjectsClick={() => scrollToRef(portfolioRef)}
-  onAboutClick={() => scrollToRef(aboutRef)}
-  onResumeClick={() => scrollToRef(resumeRef)}
-/>
-      </div>
       </div>
     </>
   );
