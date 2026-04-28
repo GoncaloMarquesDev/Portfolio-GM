@@ -50,7 +50,6 @@
   top: 0;
   background: white;
   min-height: 70vh;
-  
 }
 
 //media queries
@@ -75,11 +74,11 @@
   .section-line {
     display: none;
   }
-   .card-wrapper {
-  position: relative;
-  height: auto;
-  margin-bottom: 32px;
-}
+  .card-wrapper {
+    position: relative;
+    height: auto;
+    margin-bottom: 32px;
+  }
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .info-text {
@@ -90,10 +89,9 @@
     color: tokens.$gray-600;
     font-weight: 200;
   }
-   .card-wrapper {
-  position: relative;
-  height: auto;
-  margin-bottom: 32px;
-}
-
+  .card-wrapper {
+    position: relative;
+    height: auto;
+    margin-bottom: 0;
+  }
 }
