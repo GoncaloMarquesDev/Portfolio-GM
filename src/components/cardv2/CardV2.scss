@@ -13,7 +13,7 @@
   border-radius: 8px;
   transition: opacity 0.5s ease;
   /* justify-items: end; */
- /*  align-items: center; */
+  /*  align-items: center; */
 }
 
 .portfolio-wrapper1.is-fixed {
@@ -67,5 +67,6 @@
   }
   .portfolio-description1 {
     text-align: center;
+    padding-top: 0;
   }
 }
