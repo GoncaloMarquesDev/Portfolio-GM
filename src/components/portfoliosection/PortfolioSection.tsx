@@ -27,7 +27,7 @@ function Portfolio() {
       image: project3,
       description:
         "A mobile-first web application for discovering and streaming online radio stations worldwide, built with React. The app provides a clean and intuitive interface that allows users to search, explore, and listen to live radio stations in real time. It uses React state and Context API for efficient global state management, ensuring a smooth and consistent user experience. Data is fetched from external APIs, enabling dynamic content and real-time updates. The project also emphasizes responsive design and modern CSS techniques (Flexbox & Grid), delivering a seamless experience across mobile, tablet, and desktop devices. This project highlights a component-based architecture, scalable layout system, and attention to UI/UX details.",
-      title: "Radios Online",
+      title: "Online Radio Stations",
       technologies: [
         "React",
         "Vite",
