@@ -1,11 +1,10 @@
-@use "../../styles/_mixins.scss" as mixins;
-@use "../../styles/_tokens.scss" as tokens;
-
+@charset "UTF-8";
+/* _mixin botao base */
 .wrapper-resume {
-  @include mixins.left-padding;
+  padding-left: 32px;
   width: 100%;
   max-width: 1280px;
-  padding: 0 32px 104px 32px; /* espaçamento consistente */
+  padding: 96px 32px 104px 32px; /* espaçamento consistente */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -13,24 +12,37 @@
 }
 
 .line-group {
-  @include mixins.header-title;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
   padding-bottom: 16px;
 }
 
 .section-line-resume {
-  @include mixins.section-line-base;
-  background-color: tokens.$gray-500;
+  width: 55px;
+  height: 1px;
+  border: none;
+  margin-top: 12px;
+  background-color: #6a7282;
 }
 
 .resume {
-  @include mixins.heading-5-light;
-  color: tokens.$gray-500;
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #6a7282;
   padding-bottom: 8px;
 }
 
 .resume-description {
-  @include mixins.heading-4-regular;
-  color: tokens.$gray-600;
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #4a5565;
   padding-bottom: 32px;
   max-width: 800px;
   line-height: 1.6;
@@ -46,7 +58,7 @@
   background-color: #ffffff;
   padding: 10px 16px;
   border-radius: 3px;
-  color: tokens.$gray-600;
+  color: #4a5565;
   letter-spacing: 0.05em;
   font-size: 14px;
   gap: 16px;
@@ -72,20 +84,17 @@
 
 /* Animação da seta */
 @keyframes bounce {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-4px);
   }
 }
-
 /* media queries */
 @media (max-width: 1024px) {
   .wrapper-resume {
     width: 100%;
-
     padding: 96px 32px 104px 32px; /* espaçamento consistente */
     margin: 0 auto;
     display: flex;
@@ -98,7 +107,7 @@
     display: none;
   }
   .wrapper-resume {
-    @include mixins.left-padding;
+    padding-left: 32px;
     width: 100%;
     padding: 74px 32px 56px 32px; /* espaçamento consistente */
     margin: 0 auto;
@@ -112,39 +121,59 @@
     align-items: center;
   }
   .resume {
-    @include mixins.heading-5-light;
-    color: tokens.$gray-500;
+    font-family: "Onest";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #6a7282;
     padding-bottom: 8px;
   }
   .resume-description {
-    @include mixins.body;
-    color: tokens.$gray-600;
+    font-family: "Onest";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #4a5565;
     padding-bottom: 32px;
     max-width: 800px;
     line-height: 1.6;
     text-align: justify;
   }
 }
-
 .line-group {
-  @include mixins.header-title;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
   padding-bottom: 16px;
 }
 
 .section-line-resume {
-  @include mixins.section-line-base;
-  background-color: tokens.$gray-500;
+  width: 55px;
+  height: 1px;
+  border: none;
+  margin-top: 12px;
+  background-color: #6a7282;
 }
 
 .resume {
-  @include mixins.heading-5-light;
-  color: tokens.$gray-500;
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #6a7282;
   padding-bottom: 8px;
 }
 
 .resume-description {
-  @include mixins.heading-4-regular;
-  color: tokens.$gray-600;
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #4a5565;
   padding-bottom: 32px;
   max-width: 800px;
   line-height: 1.6;
@@ -160,7 +189,7 @@
   background-color: #ffffff;
   padding: 10px 16px;
   border-radius: 3px;
-  color: tokens.$gray-600;
+  color: #4a5565;
   letter-spacing: 0.05em;
   font-size: 14px;
   gap: 16px;
@@ -186,23 +215,20 @@
 
 /* Animação da seta */
 @keyframes bounce {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-4px);
   }
 }
-
 /* media queries */
-
 @media (max-width: 768px) {
   .section-line-resume {
     display: none;
   }
   .wrapper-resume {
-    @include mixins.left-padding;
+    padding-left: 32px;
     width: 100%;
     padding: 74px 32px 84px 32px; /* espaçamento consistente */
     margin: 0 auto;
@@ -216,13 +242,12 @@
     align-items: center;
   }
 }
-
 @media (min-width: 320px) and (max-width: 480px) {
   .section-line-resume {
     display: none;
   }
   .wrapper-resume {
-    @include mixins.left-padding;
+    padding-left: 32px;
     width: 100%;
     padding: 74px 32px 104px 32px; /* espaçamento consistente */
     margin: 0 auto;
@@ -236,16 +261,24 @@
     align-items: center;
   }
   .resume {
-    @include mixins.heading-5-light;
-    color: tokens.$gray-500;
+    font-family: "Onest";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #6a7282;
     padding-bottom: 8px;
   }
   .resume-description {
-    @include mixins.body;
-    color: tokens.$gray-600;
+    font-family: "Onest";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    color: #4a5565;
     padding-bottom: 32px;
     max-width: 800px;
     line-height: 1.6;
     text-align: justify;
   }
-}
+}/*# sourceMappingURL=Resume.css.map */

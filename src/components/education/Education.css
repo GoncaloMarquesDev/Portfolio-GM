@@ -1,0 +1,105 @@
+/* _mixin botao base */
+.formation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0 32px;
+  gap: 64px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.course {
+  font-family: "Onest";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #4a5565;
+  flex: 1;
+  min-width: 200px;
+}
+
+.year {
+  font-family: "Onest";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #4a5565;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.school {
+  font-family: "Onest";
+  font-weight: Light;
+  font-size: 13px;
+  line-height: 120%;
+  letter-spacing: 2%;
+  padding-bottom: 32px;
+  color: #ff6900;
+  font-weight: bolder;
+}
+
+.about-line {
+  border: none;
+  height: 1px;
+  background-color: #e5e7eb;
+  width: 100%;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .education-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .formation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px 0 12px;
+    gap: 16px;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .course {
+    font-family: "Onest";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0%;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .course {
+    font-family: "Onest";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #4a5565;
+    flex: 1;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    text-align: center;
+  }
+  .formation {
+    padding: 24px 0 24px;
+  }
+  .flex-education {
+    margin-top: 20px;
+  }
+  .year {
+    font-family: "Onest";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+  }
+}/*# sourceMappingURL=Education.css.map */

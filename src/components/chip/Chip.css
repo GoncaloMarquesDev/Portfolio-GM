@@ -1,0 +1,40 @@
+/* _mixin botao base */
+.chip-react {
+  margin-top: 30px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background-color: #e5e7eb;
+  font-family: "Onest";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #6a7282;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .chip {
+    background-color: #e5e7eb;
+    font-family: "Onest";
+    font-weight: Light;
+    font-size: 13px;
+    line-height: 120%;
+    letter-spacing: 2%;
+    color: #6a7282;
+    padding: 2px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  .chip-react {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=Chip.css.map */

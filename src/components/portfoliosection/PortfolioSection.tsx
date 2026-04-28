@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
 import CardV2 from "../cardv2/CardV2";
 import project1 from "../../assets/project1_teste.png";
 import project2 from "../../assets/project2_teste.png";
+import project3 from "../../assets/project3_teste.png";
 import "./PortfolioSection.scss";
 
 function Portfolio() {
@@ -22,56 +22,23 @@ function Portfolio() {
       title: "Movies Database",
       technologies: ["React", "Vite", "JS", "SCSS", "REST API"],
     },
+    {
+      link: "https://radioo-mocha.vercel.app/",
+      image: project3,
+      description:
+        "A mobile-first web application for discovering and streaming online radio stations worldwide, built with React. The app provides a clean and intuitive interface that allows users to search, explore, and listen to live radio stations in real time. It uses React state and Context API for efficient global state management, ensuring a smooth and consistent user experience. Data is fetched from external APIs, enabling dynamic content and real-time updates. The project also emphasizes responsive design and modern CSS techniques (Flexbox & Grid), delivering a seamless experience across mobile, tablet, and desktop devices. This project highlights a component-based architecture, scalable layout system, and attention to UI/UX details.",
+      title: "Radios Online",
+      technologies: [
+        "React",
+        "Vite",
+        "JS",
+        "SCSS",
+        "Typescript",
+        "REST API",
+        "Flexbox",
+      ],
+    },
   ];
-
-  const containerRef = useRef<HTMLDivElement>(null);
-  const firstCardRef = useRef<HTMLDivElement>(null);
-  const secondCardRef = useRef<HTMLDivElement>(null);
-
-  // Estado para controlar se o segundo card está fixo (lock)
-  const [isSecondFixed, setIsSecondFixed] = useState(false);
-  // Estado para controlar se o container está "lockado"
-  const [isLocked, setIsLocked] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (
-        !containerRef.current ||
-        !firstCardRef.current ||
-        !secondCardRef.current
-      )
-        return;
-
-      const containerRect = containerRef.current.getBoundingClientRect();
-      const firstRect = firstCardRef.current.getBoundingClientRect();
-      /* const secondRect = secondCardRef.current.getBoundingClientRect(); */
-
-      // Quando o topo do container passou o topo viewport
-      // E o segundo card ainda não passou o topo do container menos a altura do primeiro card
-      const startLockPoint = 0;
-      const endLockPoint = firstRect.height;
-
-      // scroll offset do container em relação ao topo da viewport
-      const scrollOffset = -containerRect.top;
-
-      if (scrollOffset >= startLockPoint && scrollOffset < endLockPoint) {
-        // Lock ativo
-        setIsLocked(true);
-        setIsSecondFixed(true);
-      } else if (scrollOffset >= endLockPoint) {
-        // Passou do lock - scroll normal
-        setIsLocked(false);
-        setIsSecondFixed(false);
-      } else {
-        // Antes do lock
-        setIsLocked(false);
-        setIsSecondFixed(false);
-      }
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <div className="info-text">
@@ -87,43 +54,19 @@ function Portfolio() {
         </div>
       </div>
 
-      <section
-        className="portfolio"
-        ref={containerRef}
-        style={{
-          position: "relative",
-          height:
-            isLocked && firstCardRef.current
-              ? firstCardRef.current.offsetHeight * 2
-              : "auto",
-          // altura do container dobra para manter o lock enquanto o segundo card sobe
-        }}
-      >
-        <div
-          ref={firstCardRef}
-          className="sticky-card-wrapper"
-          style={{
-            position: "sticky",
-            top: 0,
-            zIndex: 5,
-            background: "white",
-          }}
-        >
-          <CardV2 {...projects[0]} />
-        </div>
-
-        <div
-          ref={secondCardRef}
-          className={isSecondFixed ? "sticky-second-card" : ""}
-          style={{
-            position: isSecondFixed ? "sticky" : "relative",
-            top: isSecondFixed ? 0 : "auto",
-            zIndex: 10,
-            background: "white",
-          }}
-        >
-          <CardV2 {...projects[1]} />
-        </div>
+      <section className="portfolio">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="card-wrapper"
+            /* style={{
+              top: `${index * 40}px`, // offset progressivo
+              zIndex: index + 1,
+            }} */
+          >
+            <CardV2 {...project} />
+          </div>
+        ))}
       </section>
     </div>
   );

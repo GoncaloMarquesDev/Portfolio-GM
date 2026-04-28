@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 144px 32px 104px 32px;
+  padding: 144px 32px 0 32px;
   margin: 0 auto;
 }
 
@@ -24,7 +24,6 @@
 }
 
 .header {
-  /*  padding: 0 32px 0 0; */
   display: flex;
   flex-direction: column;
 }
@@ -39,35 +38,19 @@
   background-color: tokens.$gray-500;
 }
 
-/* .portfolio-wrapper1 {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 24px;
-  margin: 0 auto;
-  padding: 48px 0 10px 0;
-  width: 100%;
-  max-width: 1280px;
-  background: white;
-  border-radius: 8px;
-  transition: opacity 0.5s ease;
-  justify-items: end;
-} */
 .portfolio-wrapper1 + .portfolio-wrapper1 {
   /*N esquecer de garantir que o segundo card fica por cima */
   z-index: 1;
 }
 .portfolio {
-  /*  margin-top: 60px; */
-  /* Importante para o lock */
-  overflow: visible;
+  position: relative;
 }
-
-.sticky-card-wrapper {
-  width: 100%;
-}
-
-.sticky-second-card {
-  border-radius: 8px;
+.card-wrapper {
+  position: sticky;
+  top: 0;
+  background: white;
+  min-height: 70vh;
+  
 }
 
 //media queries
@@ -92,6 +75,11 @@
   .section-line {
     display: none;
   }
+   .card-wrapper {
+  position: relative;
+  height: auto;
+  margin-bottom: 32px;
+}
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .info-text {
@@ -102,4 +90,10 @@
     color: tokens.$gray-600;
     font-weight: 200;
   }
+   .card-wrapper {
+  position: relative;
+  height: auto;
+  margin-bottom: 32px;
+}
+
 }
