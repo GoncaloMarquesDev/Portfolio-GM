@@ -1,6 +1,4 @@
-@use "../../styles/_mixins.scss" as mixins;
-@use "../../styles/_tokens.scss" as tokens;
-
+/* _mixin botao base */
 .portfolio-wrapper1 {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -12,8 +10,8 @@
   background: white;
   border-radius: 8px;
   transition: opacity 0.5s ease;
-  /* justify-items: end; */
- /*  align-items: center; */
+  justify-items: end;
+ /*  background-color: aqua; */
 }
 
 .portfolio-wrapper1.is-fixed {
@@ -25,13 +23,21 @@
 }
 
 .portfolio-header1 {
-  @include mixins.heading-4;
-  color: tokens.$gray-600;
+  font-family: "Onest";
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #4a5565;
 }
 
 .portfolio-text1 {
-  @include mixins.heading-text;
-  color: tokens.$gray-400;
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #99a1af;
   padding-top: 16px;
 }
 
@@ -40,10 +46,13 @@
   border-radius: 10px;
 }
 
-//media queries
 @media (max-width: 768px) {
   .portfolio-text1 {
-    @include mixins.heading-6;
+    font-family: "Onest";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
@@ -61,11 +70,15 @@
     justify-items: end;
   }
   .portfolio-text1 {
-    @include mixins.small;
-    color: tokens.$gray-400;
+    font-family: "Onest";
+    font-weight: Light;
+    font-size: 13px;
+    line-height: 120%;
+    letter-spacing: 2%;
+    color: #99a1af;
     padding-top: 16px;
   }
   .portfolio-description1 {
     text-align: center;
   }
-}
+}/*# sourceMappingURL=CardV2.css.map */

@@ -1,0 +1,22 @@
+/* _global.scss */
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Onest", sans-serif;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* _mixin botao base *//*# sourceMappingURL=styles.css.map */

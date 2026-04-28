@@ -1,0 +1,120 @@
+/* _mixin botao base */
+.info-text {
+  padding-left: 32px;
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 144px 32px 104px 32px;
+  margin: 0 auto;
+}
+
+.selected-works {
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #6a7282;
+}
+
+.works-text {
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #4a5565;
+}
+
+.header {
+  /*  padding: 0 32px 0 0; */
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding-bottom: 16px;
+}
+
+.section-line {
+  width: 55px;
+  height: 1px;
+  border: none;
+  margin-top: 12px;
+  background-color: #6a7282;
+}
+
+/* .portfolio-wrapper1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+  margin: 0 auto;
+  padding: 48px 0 10px 0;
+  width: 100%;
+  max-width: 1280px;
+  background: white;
+  border-radius: 8px;
+  transition: opacity 0.5s ease;
+  justify-items: end;
+} */
+.portfolio-wrapper1 + .portfolio-wrapper1 {
+  /*N esquecer de garantir que o segundo card fica por cima */
+  z-index: 1;
+}
+
+.portfolio {
+  /*  margin-top: 60px; */
+  /* Importante para o lock */
+  overflow: visible;
+}
+
+.sticky-card-wrapper {
+  width: 100%;
+}
+
+.sticky-second-card {
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .info-text {
+    padding-left: 32px;
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 370px 32px 0 32px;
+    margin: 0 auto;
+  }
+  .header-title {
+    justify-content: center;
+  }
+  .works-text {
+    text-align: center;
+  }
+  .section-line {
+    display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .info-text {
+    padding: 300px 32px 0 32px;
+  }
+  .works-text {
+    font-family: "Onest";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #4a5565;
+    font-weight: 200;
+  }
+}/*# sourceMappingURL=PortfolioSection.css.map */

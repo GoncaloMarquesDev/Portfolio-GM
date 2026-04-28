@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/* _mixin botao base */
+.card-title {
+  text-decoration: none;
+  border-bottom: none;
+  box-shadow: none;
+  outline: none;
+  cursor: none;
+  font-family: "Onest";
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #4a5565;
+  padding-top: 16px;
+}
+
+.card-content {
+  width: 600px;
+}
+
+.card-link {
+  text-decoration: none;
+  border-bottom: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.work-content {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 56/44.3;
+  border-radius: 3px;
+  overflow: visible;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  cursor: none;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagem normal */
+.work-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+  transition: filter 0.4s ease;
+}
+
+.work-description {
+  width: 110%;
+  max-width: 110%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff6900;
+  padding: 20px;
+  border-radius: 3px;
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+
+/* Tooltip (já configurada) */
+.follow {
+  position: absolute;
+  pointer-events: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  min-width: 30px;
+  min-height: 10px;
+  white-space: nowrap;
+  font-family: "Onest";
+  font-weight: Light;
+  font-size: 13px;
+  line-height: 120%;
+  letter-spacing: 2%;
+  color: #ff6900;
+  font-weight: bolder;
+  border-radius: 100px;
+  transform: translate(-50%, -120%);
+  z-index: 9;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover effects: */
+/* .work-content:hover {
+  transform: scale(1.1);
+} */
+.work-content:hover .work-image {
+  filter: blur(3px);
+  filter: grayscale(100%);
+}
+
+.work-content:hover .work-description {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.work-content:hover .follow {
+  opacity: 1;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .card-title {
+    text-align: center;
+    font-family: "Onest";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+  }
+  .work-image {
+    width: 80%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 3px;
+    transition: filter 0.4s ease;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .work-content {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    /*  height: 200px; */
+    border-radius: 3px;
+    overflow: visible;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: none;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .work-image {
+    width: 300px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    border-radius: 3px;
+    transition: filter 0.4s ease;
+  }
+  .card-title {
+    text-decoration: none;
+    border-bottom: none;
+    box-shadow: none;
+    outline: none;
+    cursor: none;
+    font-family: "Onest";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #4a5565;
+    padding-top: 16px;
+    text-align: center;
+  }
+  .work-description {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    width: 105%;
+    z-index: 10;
+  }
+  .card-content {
+    width: 360px;
+    padding-bottom: 60px;
+  }
+}/*# sourceMappingURL=Card.css.map */

@@ -1,0 +1,233 @@
+/* _mixin botao base */
+.hero-container {
+  padding-left: 32px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 16px;
+  /* padding-bottom: 104px; */
+}
+
+.hero {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+}
+
+.hero-image img {
+  width: 230px;
+  height: 230px;
+  border-radius: 100%;
+  padding-block: 32px 32px;
+}
+
+.hero-text p {
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -2%;
+  color: #525252;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  text-align: justify;
+}
+
+.hero-subtext p {
+  font-family: "Onest";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #525252;
+  padding-bottom: 24px;
+}
+
+.hero-socials {
+  display: flex;
+  flex-direction: row;
+}
+.hero-socials img {
+  padding-right: 16px;
+}
+
+/*bts socials */
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-2 .icon-content {
+  margin: 0 10px 0 0;
+  position: relative;
+}
+
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -32x;
+}
+
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgba(0, 0, 0, 0.12);
+}
+
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+}
+
+.example-2 .icon-content a:hover {
+  color: white;
+}
+
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+/* Social-specific colors */
+.example-2 .icon-content a[data-social=linkedin] .filled,
+.example-2 .icon-content a[data-social=linkedin] ~ .tooltip {
+  background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social=github] .filled,
+.example-2 .icon-content a[data-social=github] ~ .tooltip {
+  background-color: #24262a;
+}
+
+.example-2 .icon-content a[data-social=instagram] .filled,
+.example-2 .icon-content a[data-social=instagram] ~ .tooltip {
+  background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
+}
+
+/* media queries */
+@media (max-width: 1024px) {
+  .hero-container {
+    width: 90%;
+    height: auto;
+    padding-top: 32px;
+    padding-bottom: 64px;
+  }
+  .hero {
+    width: 100%;
+    height: auto;
+  }
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+    padding-block: 24px 24px;
+  }
+  .hero-text p,
+  .hero-subtext p {
+    text-align: left;
+  }
+  .hero-socials {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .hero-container {
+    width: 100%;
+    padding: 16px 24px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-image img {
+    width: 140px;
+    height: 140px;
+    padding-block: 16px 16px;
+  }
+  .hero-text p,
+  .hero-subtext p {
+    text-align: center;
+    padding-bottom: 16px;
+  }
+  .hero-socials {
+    justify-content: center;
+    gap: 12px;
+  }
+  .hero-socials img {
+    padding-right: 8px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .hero-image img {
+    width: 100px;
+    height: 100px;
+    padding-block: 12px 12px;
+  }
+  .hero-text p {
+    font-family: "Onest";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+  }
+  .hero-subtext p {
+    font-size: 12px;
+    line-height: 100%;
+  }
+  .hero-socials img {
+    width: 30px;
+    height: 30px;
+  }
+  .example-2 .icon-content a svg {
+    width: 20px;
+    height: 20px;
+  }
+}/*# sourceMappingURL=Hero.css.map */
